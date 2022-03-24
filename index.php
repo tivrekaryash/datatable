@@ -34,14 +34,11 @@
             <table id="example" class="table">
               <thead>
                 <th>Id</th>
-                <th>Full Name</th>
-                <th>Date of Birth</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Address</th>
-                <th>Contact Number</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>Actions</th>
+                <th>Mobile</th>
+                <th>City</th>
+                <th>Options</th>
               </thead>
               <tbody>
               </tbody>
