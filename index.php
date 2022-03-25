@@ -25,19 +25,24 @@
     <p class="datatable design text-center">Welcome to Datatable</p>
     <div class="row">
       <div class="container">
+        <!-- add user button
         <div class="btnAdd">
           <a href="#!" data-id="" data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-success btn-sm">Add User</a>
         </div>
+        -->
         <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-8">
             <table id="example" class="table">
               <thead>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Candidate Id</th>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Contact Number</th>
                 <th>Email</th>
-                <th>Mobile</th>
-                <th>City</th>
                 <th>Options</th>
               </thead>
               <tbody>
@@ -63,7 +68,7 @@
     $(document).ready(function() {
       $('#example').DataTable({
         "fnCreatedRow": function(nRow, aData, iDataIndex) {
-          $(nRow).attr('id', aData[0]);
+          $(nRow).attr('candidate_id', aData[0]);
         },
         'serverSide': 'true',
         'processing': 'true',
@@ -75,12 +80,14 @@
         },
         "aoColumnDefs": [{
             "bSortable": false,
-            "aTargets": [5]
+            "aTargets": [8]
           },
 
         ]
       });
     });
+
+/* add user js script
     $(document).on('submit', '#addUser', function(e) {
       e.preventDefault();
       var city = $('#addCityField').val();
@@ -113,6 +120,9 @@
         alert('Fill all the required fields');
       }
     });
+*/
+
+/* update user js script
     $(document).on('submit', '#updateUser', function(e) {
       e.preventDefault();
       //var tr = $(this).closest('tr');
@@ -156,6 +166,9 @@
         alert('Fill all the required fields');
       }
     });
+*/
+
+/* edit button js script
     $('#example').on('click', '.editbtn ', function(event) {
       var table = $('#example').DataTable();
       var trid = $(this).closest('tr').attr('id');
@@ -180,7 +193,9 @@
         }
       })
     });
+*/
 
+/* delete button js script
     $(document).on('click', '.deleteBtn', function(event) {
       var table = $('#example').DataTable();
       event.preventDefault();
@@ -213,8 +228,10 @@
 
 
     })
+    */
   </script>
   <!-- Modal -->
+  <!-- update user modal
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -261,7 +278,9 @@
       </div>
     </div>
   </div>
-  <!-- Add user Modal -->
+  -->
+
+  <!-- Add user Modal
   <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -306,6 +325,8 @@
       </div>
     </div>
   </div>
+  -->
+
 </body>
 
 </html>
